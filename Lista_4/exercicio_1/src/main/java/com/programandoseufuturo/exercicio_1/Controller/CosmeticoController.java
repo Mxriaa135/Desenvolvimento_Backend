@@ -1,7 +1,6 @@
 package com.programandoseufuturo.exercicio_1.Controller;
 
 import com.programandoseufuturo.exercicio_1.model.Cosmetico;
-import com.programandoseufuturo.exercicio_1.repository.BancoDeDados;
 import com.programandoseufuturo.exercicio_1.service.CosmeticoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;

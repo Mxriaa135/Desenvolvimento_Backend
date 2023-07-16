@@ -1,7 +1,6 @@
 package com.programandoseufuturo.exercicio_2.Controller;
 
 import com.programandoseufuturo.exercicio_2.model.Sala;
-import com.programandoseufuturo.exercicio_2.repository.BancoDeDados;
 import com.programandoseufuturo.exercicio_2.service.SalaService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -21,7 +20,7 @@ public class SalaController {
     }
     @PutMapping
     public String atualizar(@RequestBody Sala sala){
-        return salaService.atualizar(sala);
+        return salaService.alugar(sala);
     }
     @PutMapping("/desalugar")
     public String desalugar(@RequestBody Sala sala){

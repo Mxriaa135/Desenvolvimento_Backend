@@ -15,8 +15,8 @@ public class SalaService {
     public List<Sala> getAll(){
         return bancoDeDados.findAll();
     }
-    public String atualizar(Sala sala){
-        return bancoDeDados.atualizar(sala);
+    public String alugar(Sala sala){
+        return bancoDeDados.alugar(sala);
     }
     public String desalugar(Sala sala){
         return bancoDeDados.desalugar(sala);

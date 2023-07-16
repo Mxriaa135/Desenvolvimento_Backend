@@ -13,16 +13,10 @@ public class CosmeticoService {
     private BancoDeDados bancoDeDados;
 
     public List<Cosmetico> getAll() {
-        return bancoDeDados.FindAll();
+        return bancoDeDados.getAll();
     }
     public Cosmetico getById(int id){
-        List<Cosmetico> cosmeticos = bancoDeDados.FindAll();
-        for (Cosmetico cosmetico : cosmeticos){
-            if(cosmetico.getId() == id){
-                return cosmetico;
-            }
-        }
-        return null;
+        return bancoDeDados.getById(id);
     }
     public String save(Cosmetico cosmetico){
         return bancoDeDados.save(cosmetico);

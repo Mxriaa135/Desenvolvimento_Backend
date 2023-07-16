@@ -24,7 +24,7 @@ public class BancoDeDados {
     public List<Sala> findAll(){
         return salas;
     }
-    public String atualizar(Sala sala) {
+    public String alugar(Sala sala) {
         for (Sala salaDaLista : salas){
             if(sala.getId() == salaDaLista.getId()){
                 if(!salaDaLista.getEstaAlugada()){
@@ -32,12 +32,9 @@ public class BancoDeDados {
                     salaDaLista.setNomeLocatario(sala.getNomeLocatario());
                     return "Sala alugada com sucesso!";
                 }
-                else if(salaDaLista.getEstaAlugada()){
-                    return "Sala já alugada";
-                }
             }
         }
-            return null;
+        return "Sala já alugada";
     }
     public String desalugar(Sala sala){
         for (Sala salaDaLista : salas){
@@ -47,11 +44,8 @@ public class BancoDeDados {
                     salaDaLista.setNomeLocatario("");
                     return "Sala desalugada com sucesso!";
                 }
-                else if(!salaDaLista.getEstaAlugada()){
-                    return "Esta sala já está desalugada!";
-                }
             }
         }
-        return null;
+        return "Esta sala já está desalugada!";
     }
 }
