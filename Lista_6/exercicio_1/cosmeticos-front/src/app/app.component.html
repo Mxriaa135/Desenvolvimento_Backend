@@ -1,0 +1,13 @@
+<div class="container">
+  <div class="row d-flex justify content center" *ngFor="let cosmetico of cosmeticos">
+
+      <div class="card" style="width: 18rem;">
+          <img src="{{ cosmetico.imagem }}" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">{{ cosmetico.nome }}</h5>
+            <p class="card-text">R$: {{ cosmetico.preco }}</p>
+            <a href="#" class="btn btn-primary">Comprar</a>
+          </div>
+        </div>
+  </div>
+</div>

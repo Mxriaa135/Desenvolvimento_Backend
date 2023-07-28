@@ -12,9 +12,9 @@ public class BancoDeDados {
     private List<Cosmetico> cosmeticos = new ArrayList<>();
 
     public BancoDeDados (){
-        this.cosmeticos.add (new Cosmetico(1, "Creme facial", 49.99));
-        this.cosmeticos.add (new Cosmetico(2, "Creme corporal", 59.99));
-        this.cosmeticos.add (new Cosmetico(3, "Mascára facial", 25.90));
+        this.cosmeticos.add (new Cosmetico(1, "Creme facial", 49.99, "https://media.vogue.es/photos/5e298b2fa3b62f00081824e6/master/w_1600%2Cc_limit/kooch.jpg"));
+        this.cosmeticos.add (new Cosmetico(2, "Creme corporal", 59.99, "https://up2you.cdn.plataformaneo.com.br/produto/20220912111447_608999392_D.jpg"));
+        this.cosmeticos.add (new Cosmetico(3, "Mascára facial", 25.90, "https://tezmb9.vtexassets.com/arquivos/ids/157922/Mascara_Black.jpg?v=637551270759070000"));
     }
     public List<Cosmetico> getAll() {
         return cosmeticos;
