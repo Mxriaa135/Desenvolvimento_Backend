@@ -1,5 +1,7 @@
 package com.programandoSeuFuturo.Aula_9.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import java.util.List;
@@ -13,7 +15,8 @@ public class Categoria {
     @NotNull
     private String nome;
 
-    @OneToMany(mappedBy = "categoria")
+    @OneToMany(mappedBy = "categoria", cascade = CascadeType.ALL)
+    @JsonIgnoreProperties("categoria")
     private List<Jogo> jogos;
 
     public int getId() {

@@ -1,12 +1,12 @@
 package com.programandoSeuFuturo.Aula_9.model;
 
-import javax.persistence.Entity;
+import javax.persistence.*;
+
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
 import javax.validation.constraints.NotNull;
+import java.util.List;
 
 @Entity
 public class Jogo {
@@ -23,6 +23,11 @@ public class Jogo {
     private String site;
     @JsonProperty("esta_favoritado")
     private boolean estaFavoritado;
+
+    @ManyToOne
+    @JoinColumn(name = "categoria_id")
+    @JsonIgnoreProperties("jogos")
+    private Categoria categoria;
 
     public String getSite() {
         return site;
